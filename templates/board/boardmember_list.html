@@ -1,0 +1,15 @@
+{% extends 'board/board_base.html' %}
+
+{% block contents %}
+
+<h1>The Board</h1>
+
+{% for member in board_members %}
+    <h2>{{ member }}{% if member.position %} ({{ member.position }}){% endif %}</h2>
+
+    {{ member.biography|linebreaks }}
+{% empty %}
+    <p>No board members defined yet.</p>
+{% endfor %}
+
+{% endblock %}

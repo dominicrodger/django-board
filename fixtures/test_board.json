@@ -1,0 +1,23 @@
+[
+  {
+    "pk": 1,
+    "model": "board.boardmember",
+    "fields": {
+      "title": "Prof",
+      "forename": "Edgar",
+      "surname": "Dijkstra",
+      "position": "Chief Computer Scientist"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "board.boardmember",
+    "fields": {
+      "title": "Mr",
+      "forename": "Guido",
+      "surname": "van Rossum",
+      "biography": "The creator of Python.",
+      "email": "guido@pythoneers.org"
+    }
+  }
+]
