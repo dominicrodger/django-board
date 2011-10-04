@@ -14,7 +14,7 @@
     {% endif %}
     {% if member.position %}<p class="board_member_position">{{ member.position }}</p>{% endif %}
 
-    {{ member.biography|linebreaks }}
+    {{ member.biography|safe }}
 {% empty %}
     <p>No board members defined yet.</p>
 {% endfor %}
