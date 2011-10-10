@@ -3,7 +3,7 @@ from django.test import TestCase
 from django.test.client import Client
 from board.models import BoardMember
 
-class AuthorTestCase(TestCase):
+class BoardMemberTestCase(TestCase):
     fixtures = ['test_board.json',]
 
     def setUp(self):
@@ -12,7 +12,7 @@ class AuthorTestCase(TestCase):
 
     def testUnicode(self):
         self.assertEqual(self.edgar.__unicode__(), u'Prof Edgar Dijkstra')
-        self.assertEqual(self.guido.__unicode__(), u'Mr Guido van Rossum')
+        self.assertEqual(self.guido.__unicode__(), u'Guido van Rossum')
 
     def testBoardList(self):
         response = self.client.get(reverse('board_index',))

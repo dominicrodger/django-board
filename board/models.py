@@ -4,7 +4,7 @@ from django.db import models
 import os
 
 class BoardMember(models.Model):
-    title = models.CharField(max_length = 100, help_text = u'The board member\'s title (Mr, Mrs, Dr, etc.)')
+    title = models.CharField(max_length = 100, help_text = u'The board member\'s title (Mr, Mrs, Dr, etc.)', blank = True, null = True)
     forename = models.CharField(max_length = 100, help_text = u'The board member\'s forename')
     surname = models.CharField(max_length = 100, help_text = u'The board member\'s surname')
     position = models.CharField(max_length = 255, blank = True, null = True, help_text = u'Their position on the board')
@@ -13,7 +13,9 @@ class BoardMember(models.Model):
     image = ImageField(upload_to = 'board', blank = True, null = True)
 
     def __unicode__(self):
-        return u'{0} {1} {2}'.format(self.title, self.forename, self.surname)
+        if self.title:
+            return u'{0} {1} {2}'.format(self.title, self.forename, self.surname)
+        return u'{0} {1}'.format(self.forename, self.surname)
 
     def admin_thumbnail(self):
         im = get_thumbnail(self.image, '100x100', crop='center', quality=99)

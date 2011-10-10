@@ -13,7 +13,6 @@
     "pk": 2,
     "model": "board.boardmember",
     "fields": {
-      "title": "Mr",
       "forename": "Guido",
       "surname": "van Rossum",
       "biography": "The creator of Python.",
