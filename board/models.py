@@ -17,6 +17,11 @@ class BoardMember(models.Model):
             return u'{0} {1} {2}'.format(self.title, self.forename, self.surname)
         return u'{0} {1}'.format(self.forename, self.surname)
 
+    def name(self):
+        return self.__unicode__()
+    name.short_description = u'Name'
+    name.admin_order_field = 'surname'
+
     def admin_thumbnail(self):
         im = get_thumbnail(self.image, '100x100', crop='center', quality=99)
         return u'<img src="{0}" />'.format(im.url)
