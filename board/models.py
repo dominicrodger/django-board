@@ -23,6 +23,8 @@ class BoardMember(models.Model):
     name.admin_order_field = 'surname'
 
     def admin_thumbnail(self):
+        if not self.image:
+            return u'(None)'
         im = get_thumbnail(self.image, '100x100', crop='center', quality=99)
         return u'<img src="{0}" />'.format(im.url)
     admin_thumbnail.short_description = 'Image'
