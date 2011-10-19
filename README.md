@@ -1,11 +1,8 @@
 # django-board
 
-A stub semi-pluggable Django app for managing board members of an organisation.
+A pluggable Django app for managing board members of an organisation. Board members have titles,
+mini-biographies (which can be edited using TinyMCE), and photos.
 
-This app uses [South](http://south.aeracode.org/) for managing database changes,
-so you'll need that to use it.
+You can install this directly from GitHub with pip:
 
-This app uses [sorl-thumbnail](https://github.com/sorl/sorl-thumbnail) for board
-member profile images, so you'll need that installed to use it.
-
-Also, don't use it right now - it's not remotely finished.
+    pip install git+git://github.com/dominicrodger/django-board.git@0.1.1#egg=django_board
