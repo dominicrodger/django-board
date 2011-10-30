@@ -4,7 +4,7 @@ from sorl.thumbnail.admin import AdminImageMixin
 from tinymce.widgets import TinyMCE
 
 class BoardMemberAdmin(AdminImageMixin, admin.ModelAdmin):
-    list_display = ('name', 'admin_thumbnail', 'position', 'email',)
+    list_display = ('name', 'admin_thumbnail', 'position', 'email', 'updated')
     search_fields = ('forename', 'surname', 'position', 'email', 'biography',)
 
     def formfield_for_dbfield(self, db_field, **kwargs):

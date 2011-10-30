@@ -1,4 +1,5 @@
 from sorl.thumbnail import ImageField, get_thumbnail
+from datetime import datetime
 from django.conf import settings
 from django.db import models
 import os
@@ -11,6 +12,7 @@ class BoardMember(models.Model):
     biography = models.TextField(blank = True, null = True, help_text = u'A brief biography of the board member')
     email = models.EmailField(blank = True, null = True)
     image = ImageField(upload_to = 'board', blank = True, null = True)
+    updated = models.DateTimeField(auto_now = True, default = datetime.now(), verbose_name = u'Last Updated')
 
     def __unicode__(self):
         if self.title:
