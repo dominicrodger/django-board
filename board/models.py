@@ -1,8 +1,6 @@
 from sorl.thumbnail import ImageField, get_thumbnail
 from datetime import datetime
-from django.conf import settings
 from django.db import models
-import os
 
 class BoardMember(models.Model):
     title = models.CharField(max_length = 100, help_text = u'The board member\'s title (Mr, Mrs, Dr, etc.)', blank = True, null = True)
