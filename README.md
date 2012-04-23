@@ -12,8 +12,8 @@ You can install this directly from GitHub with pip:
 Add the following to your `INSTALLED_APPS`:
 
  * sorl.thumbnail (if not already present);
- * board
- * south (if you want to use database migrations)
+ * board;
+ * south (if you want to use database migrations).
 
 Sync database changes, using:
 
