@@ -12,6 +12,8 @@ class BoardMemberTestCase(TestCase):
     def testUnicode(self):
         self.assertEqual(self.edgar.__unicode__(), u'Prof Edgar Dijkstra')
         self.assertEqual(self.guido.__unicode__(), u'Guido van Rossum')
+        self.assertEqual(self.edgar.name(), u'Prof Edgar Dijkstra')
+        self.assertEqual(self.guido.name(), u'Guido van Rossum')
 
     def testBoardList(self):
         response = self.client.get(reverse('board_index',))
