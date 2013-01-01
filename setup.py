@@ -17,7 +17,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'Django==1.4.3',
-        'South==0.76',
+        'South==0.7.6',
         'sorl-thumbnail==11.12',
     ]
 )
