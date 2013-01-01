@@ -15,5 +15,9 @@ setup(
     include_package_data=True,
     package_data={'': ['README.md']},
     zip_safe=False,
-    install_requires=['Django', 'South', 'sorl-thumbnail',]
+    install_requires=[
+        'Django==1.4.3',
+        'South==0.76',
+        'sorl-thumbnail==11.12',
+    ]
 )
