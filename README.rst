@@ -1,28 +1,25 @@
-# django-board
+django-board
+============
 
 A pluggable Django app for managing board members of an
 organisation. Board members have titles, mini-biographies, and photos.
 
-You can install this directly from GitHub with pip:
+You can install this directly from GitHub with pip::
 
     pip install git+git://github.com/dominicrodger/django-board.git@0.1.1#egg=django_board
 
-## Getting started
+Getting started
+---------------
 
-Add the following to your `INSTALLED_APPS`:
+Add the following to your ``INSTALLED_APPS``:
 
  * sorl.thumbnail (if not already present);
- * board;
- * south (if you want to use database migrations).
+ * board.
 
-Sync database changes, using:
+Sync database changes, using::
 
-    manage.py syncdb # If not using south
+    python manage.py syncdb
 
-Or:
+You can run the test suite using::
 
-    manage.py migrate # If using south
-
-You can run the test suite using:
-
-    manage.py test board
+    python manage.py test board
