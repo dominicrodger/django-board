@@ -4,7 +4,7 @@ django-board
 A pluggable Django app for managing board members of an
 organisation. Board members have titles, mini-biographies, and photos.
 
-You can install this directly from GitHub with pip::
+Installation is simple::
 
     pip install django-board
 
