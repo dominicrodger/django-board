@@ -1,4 +1,3 @@
-from django.core.urlresolvers import reverse
 from django.template import Context, Template
 from django.test import TestCase
 from board.models import BoardMember
@@ -29,21 +28,6 @@ class BoardMemberTestCase(TestCase):
         self.assertEqual(edgar.name(), u'Prof Edgar Dijkstra')
         edgar.title = ""
         self.assertEqual(edgar.name(), u'Edgar Dijkstra')
-
-    def test_board_list_view(self):
-        edgar = BoardMemberFactory.create()
-        guido = BoardMemberFactory.create(title="",
-                                          forename="Guido",
-                                          surname="van Rossum",
-                                          email="guido@pythoneers.org")
-
-        response = self.client.get(reverse('board_index',))
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(list(response.context['board_members']),
-                         [edgar, guido, ])
-
-        # E-mail addresses should be private
-        self.assertNotContains(response, 'guido@pythoneers.org')
 
     def test_board_assignment_tag(self):
         edgar = BoardMemberFactory.create()
