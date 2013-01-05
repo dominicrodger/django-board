@@ -19,5 +19,9 @@ setup(
         'Django==1.4.3',
         'sorl-thumbnail==11.12',
         'PIL==1.1.7',
-    ]
+    ],
+    tests_require=(
+        'django-setuptest==0.1.2',
+    ),
+    test_suite='setuptest.setuptest.SetupTestSuite',
 )
