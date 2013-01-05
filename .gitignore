@@ -1,2 +1,5 @@
 django_board.egg-info/
 *.pyc
+pep8.txt
+coverage.xml
+*.egg/
