@@ -1,5 +1,5 @@
-django-board
-============
+Welcome to django-board's documentation!
+========================================
 
 A pluggable Django app for managing board members of an
 organisation. Board members have titles, mini-biographies, and photos.
