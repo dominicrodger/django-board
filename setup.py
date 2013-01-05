@@ -20,6 +20,11 @@ setup(
         'sorl-thumbnail==11.12',
         'PIL==1.1.7',
     ],
+    classifiers=[
+        'Development Status :: 3 - Alpha',
+        'Framework :: Django',
+        'License :: OSI Approved :: BSD License',
+    ],
     tests_require=(
         'django-setuptest==0.1.2',
         'factory_boy==1.2.0',
