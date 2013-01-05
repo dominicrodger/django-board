@@ -4,11 +4,13 @@ from board.models import BoardMember
 
 
 class BoardMemberTestCase(TestCase):
-    fixtures = ['test_board.json', ]
-
     def setUp(self):
-        self.edgar = BoardMember.objects.get(pk=1)
-        self.guido = BoardMember.objects.get(pk=2)
+        self.edgar, is_new = BoardMember.objects.get_or_create(title="Prof",
+                                                       forename="Edgar",
+                                                       surname="Dijkstra")
+        self.guido, is_new = BoardMember.objects.get_or_create(forename="Guido",
+                                                       surname="van Rossum",
+                                                       email="guido@pythoneers.org")
 
     def testUnicode(self):
         self.assertEqual(self.edgar.__unicode__(), u'Prof Edgar Dijkstra')
