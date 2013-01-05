@@ -1,3 +1,2 @@
-include README.md
-recursive-include board/fixtures *
+include README.rst
 recursive-include board/templates *
