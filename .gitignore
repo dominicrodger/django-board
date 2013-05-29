@@ -4,3 +4,4 @@ pep8.txt
 coverage.xml
 *.egg/
 docs/_build
+.tox/
