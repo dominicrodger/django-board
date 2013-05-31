@@ -16,7 +16,7 @@ setup(
     package_data={'': ['README.rst']},
     zip_safe=False,
     install_requires=[
-        'Django==1.4.3',
+        'Django>=1.4',
         'sorl-thumbnail==11.12',
         'PIL==1.1.7',
     ],
